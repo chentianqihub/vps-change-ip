@@ -121,7 +121,7 @@ python src/bot.py
 
 ### 3. 如何卸载？
 ```bash
-bash <(curl -L -s https://raw.githubusercontent.com/vvnocode/vps-change-ip/refs/heads/main/install.sh) uninstall
+bash <(curl -L -s https://raw.githubusercontent.com/chentianqihub/vps-change-ip/main/install.sh) uninstall
 ```
 
 ## 贡献指南

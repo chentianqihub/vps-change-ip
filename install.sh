@@ -6,7 +6,7 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 # 定义安装目录
-INSTALL_DIR="/etc/vps-ip-bot"
+INSTALL_DIR="/opt/vps-ip-bot"
 REPO_URL="https://github.com/vvnocode/vps-change-ip"
 BINARY_URL="$REPO_URL/releases/latest/download/vps-ip-bot"
 CONFIG_URL="$REPO_URL/raw/main/config.yaml.example"
@@ -92,7 +92,8 @@ After=network.target
 Type=simple
 ExecStart=$INSTALL_DIR/vps-ip-bot
 WorkingDirectory=$INSTALL_DIR
-Restart=always
+Restart=on-failure
+RestartSec=30
 
 [Install]
 WantedBy=multi-user.target
